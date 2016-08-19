@@ -1,0 +1,19 @@
+.hat {
+	position: absolute;
+    left: 10px;
+    top: 5px;
+    z-index: 0;
+  }
+.glasses {
+	position: relative;
+	bottom: 62px;
+  	right: 150px;
+	z-index: 2;
+}
+
+  .body {
+  	position: relative;
+  	top: 70px;
+  	left: 20px;
+  	z-index: -1;
+  }
