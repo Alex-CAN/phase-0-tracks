@@ -29,12 +29,10 @@
 # coffeedrinks.each do |coffeeplace, drinkz| puts "#{coffeeplace} is the best coffeeshop and the #{drinkz} is the best drink ever!" end
 
 # def delete_me(arr)
-# 	new_arr = []
 # 	arr.each do |x| 
-# 		if x <= 3
-# 			new_arr << x
+# 		if x < 3
+# 			arr.delete(x)
 # 		end
-# 	return new_arr
 # 	end
 # end
 
@@ -42,18 +40,16 @@
 
 # p delete_me(a)
 
-# def delete_me(arr, value)
-# 	arr.each do |x|
-# 		p x
-# 		var = x
-# 		if x > value
-# 			arr.delete(x)
-# 		end
-# 	end
-# end
+def delete_me(arr, value)
+	arr.each do |x|
+		if x < value
+			arr.delete(x)
+		end
+	end
+end
 
-# a = [1, 2, 3, 4]
-# p delete_me(a, 2)
+a = [1, 2, 3, 4]
+p delete_me(a, 3)
 
 # numbers = [1,2,3,4,5,6,7,8,9,10]
 
@@ -66,17 +62,17 @@
 # 	end
 # end
 
-def remove_stuff (arr)
-	arr.each do |x|
-		if x % 2 == 0
-			arr.delete(x)
-		end
-	end
-end
+# def remove_stuff (arr)
+# 	arr.each do |x|
+# 		if x % 2 == 0
+# 			arr.delete(x)
+# 		end
+# 	end
+# end
 
-numbers = [1,2,3,4,5,6,7,8,9,10]
+# numbers = [1,2,3,4,5,6,7,8,9,10]
 
-p remove_stuff (numbers)
+# p remove_stuff (numbers)
 
 			
 
