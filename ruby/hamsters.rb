@@ -1,13 +1,13 @@
+#prompts a user for info on their hamsters "name", "volume" level, "fur" color, and "age".
 puts "What's your Hamster's name?"
 name = gets.chomp
 puts "On a scale of one to 10 how lound is your hamster?"
 volume = gets.chomp.to_i
-
 puts "What color is #{name}'s fur"
 fur = gets.chomp
 puts "How old is #{name}"
 age = gets.chomp
-
+#gives variable "age" the value of nil if user leaves it blank
 if age.length == 0
 	age = nil
 end
