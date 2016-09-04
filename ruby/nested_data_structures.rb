@@ -2,7 +2,7 @@ music_library = {
 	genre_rap:{
 		genre_name: 'RAP',
 		recently_viewed:{
-			Kendrick_Lamar: ['King Kunta','Alright',],
+			kendrick_lamar: ['King Kunta','Alright',],
 			'Young Jeezy' => 'Forgive Me'
 		},
 		top_5_2016: {
@@ -18,7 +18,7 @@ music_library = {
 		genre_name: 'ROCK',
 		recently_viewed:{
 			'She Wants Revenge' => 'Tear You Apart',
-			Coheed_Cambria: ['The Suffering', 'Blood Red Summer']
+			coheed_cambria: ['The Suffering', 'Blood Red Summer']
 		},
 		top_5_2016: {
 			rank_1: 'Fall Out Boy',
@@ -51,3 +51,6 @@ p music_library[:genre_rap][:recently_viewed]['Young Jeezy']
 p music_library[:genre_rock][:recently_viewed]
 p music_library[:genre_edm][:genre_name]
 p music_library[:genre_edm][:top_5_2016]
+
+music_library[:genre_edm][:recently_viewed][:porter_robinson] = ['shelter','sad machine']
+p music_library[:genre_edm][:recently_viewed]
