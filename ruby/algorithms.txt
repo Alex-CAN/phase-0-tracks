@@ -1,0 +1,41 @@
+Elevator Psuedocode
+Check current floor number
+Check number of the destination floor.
+If current floor number is less than the destination floor number press the up arrow.
+If current floor number is greater than the destination floor number press the down arrow.
+When doors open walk in.
+Press destination floor button
+When doors open walk out.
+
+
+Brushing teeth Psuedocode
+
+Remove toothbrush from cabinet
+Turn on faucet
+Wet toothbrush
+TURN OFF FAUCET
+cover the top brussle fully with a half inch layer of toothpaste
+open mouth
+put brush at the first and farthest back top tooth
+rotate toothbrus 365 degrees while moving along front top row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached move to the bottom of the top row of teeth 
+rotate toothbrus 365 degrees while moving along bottom top row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached move to the back of the top row of teeth
+rotate toothbrus 365 degrees while moving along back top row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached turn on faucet
+rinse mouth
+spit
+TURN OFF FAUCET
+open mouth
+put brush at the first and farthest back bottom tooth
+rotate toothbrus 365 degrees while moving along front bottom row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached move to the top of the bottom row of teeth 
+rotate toothbrus 365 degrees while moving along top bottom row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached move to the back of the bottom row of teeth
+rotate toothbrus 365 degrees while moving along back bottom row of teeth at a rate of 1 millimeter a second
+when the opposite side is reached turn on faucet
+rinse mouth
+rinse toothbrush
+spit
+TURN OFF FAUCET
+ put away toothbrush
