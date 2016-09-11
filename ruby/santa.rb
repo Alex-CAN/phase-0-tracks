@@ -48,3 +48,15 @@ if num > 0
 		num -= 1
 	end
 end
+=======
+santas = []
+santas << Santa.new("agender", "black")
+santas << Santa.new("female", "Latino")
+santas << Santa.new("bigender", "white")
+santas << Santa.new("male", "Japanese")
+santas << Santa.new("female", "prefer not to say")
+santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+santas << Santa.new("N/A", "N/A")
+
+p santas
+>>>>>>> e11637873d0a9572b97d1423c51ee65c027494fe
