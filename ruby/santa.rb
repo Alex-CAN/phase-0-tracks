@@ -12,13 +12,9 @@ class Santa
 		@age = 0
 	end
 	santas_list = []
-	santas_list0 = {}
-	3.times  do santas_list << 	 Santa.new(@genders.sample, @ethnicities.sample)
-	# 	p "#{santa} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SANTA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< #{santa}"}
-		santas_list
-		santas_list.each {|santa| santas_list0[Santa.gender] = Santa.ethnicities}
-		p santas_list0
-
+	3.times  do santas_list << 	 Santa.new(@genders.sample, @ethnicities.sample) 
+				p ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SANTA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< "
+				p santas_list
 		end
 
 
