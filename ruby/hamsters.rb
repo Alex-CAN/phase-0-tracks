@@ -14,12 +14,16 @@ else
 	puts age.to_i
 end
 
+p "============================="
 puts "Hello #{name}"
+p "============================="
+
 if volume >= 6
 	puts "You've got loud one"
 else
 	puts "You've got a quiet one"
 end
+
 puts "#{fur} is a pretty color!"
 
 puts "your pet is #{age} years old?"
