@@ -7,6 +7,6 @@
 
  strings.sort(function(a, b) {
  	return a - b;
- 	 console.log(strings)
  });
 
+ console.log(strings)
