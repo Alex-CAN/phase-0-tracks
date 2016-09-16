@@ -7,7 +7,8 @@
 		first_name.each { |x| new_agent_first << char_new(x) } 
 		puts
 		last_name.each { |x|  new_agent_last << char_new(x)}
-		"Your new secret agent name is #{new_agent_first.capitalize},#{new_agent_last.capitalize}"
+		puts "Your new secret agent name is #{new_agent_first.capitalize},#{new_agent_last.capitalize}"
+		new_agent_first + new_agent_last
 	end
 	
 	def char_new(char)
@@ -45,9 +46,9 @@ end
 
 # p secret_name('sally', 'sod')
 
-p "first"
+p "What's your first name?"
 two = gets.chomp.chars
-p "last"
+p "whats your last name?"
 one = gets.chomp.chars
 
 name = AliasMaker.new
