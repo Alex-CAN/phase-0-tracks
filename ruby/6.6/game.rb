@@ -21,18 +21,17 @@ class Guessing
 
 	def guess_check(guess)
 		check = []
-		guess.each { |letter| 
-			if !@right_answer.include?(letter)
-				check <<  "x"
-			else
-				check << "o"
+		guess.each_index { |index| 
+			if @right_answer[index] == guess[index]
+				check <<  guess[index]
 			end
 		}
-		if check.include?("x")
-		 	"SORRY YOU LOSE!"
-		else
-			"WINNER!"
-		end
+		p check
+		# if check.include?(@right_answer.join)
+		#  	"WINNER!""SORRY YOU LOSE!"
+		# else
+		# 	"SORRY YOU LOSE!"
+		# end
 	end
 end
 
@@ -54,8 +53,8 @@ break if game.your_word(guess) == answer.join
 break if final.length == answer.length
 end
 
-p answer
-p game.guess_check(final)
+# p answer
+ game.guess_check(final)
 
 
 
