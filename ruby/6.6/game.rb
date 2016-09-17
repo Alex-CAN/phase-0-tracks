@@ -26,12 +26,12 @@ class Guessing
 				check <<  guess[index]
 			end
 		}
-		p check
-		# if check.include?(@right_answer.join)
-		#  	"WINNER!""SORRY YOU LOSE!"
-		# else
-		# 	"SORRY YOU LOSE!"
-		# end
+		
+		if check.include?(@right_answer.join)
+		 	"WINNER!""SORRY YOU LOSE!"
+		else
+			"SORRY YOU LOSE!"
+		end
 	end
 end
 
@@ -48,13 +48,15 @@ p "Player two make a guess"
 guess = gets.chomp
 p game.your_word(guess)
 # p answer
-final << guess	
+final << guess
+break if final.length == answer.length	
+# # final << guess
+# end
 break if game.your_word(guess) == answer.join
-break if final.length == answer.length
+p final
 end
 
-# p answer
- game.guess_check(final)
+ p game.guess_check(final)
 
 
 
