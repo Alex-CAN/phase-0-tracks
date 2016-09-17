@@ -4,7 +4,7 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-#"iNvEsTiGaTiOn".swapcase
+# p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
 # "zom".insert(2, "o")
@@ -25,7 +25,7 @@
 # "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".delete("T")
+p "The mystery of the missing first letter".delete[0]
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".squeeze(" ")
