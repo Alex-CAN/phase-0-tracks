@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Hamster
 	attr_reader = :name, :color, :volume, :age
 	def initialize(name, fur_color, volume, age)
@@ -43,6 +44,9 @@ class Hamster
 
 end
 
+=======
+#prompts a user for info on their hamsters "name", "volume" level, "fur" color, and "age".
+>>>>>>> master
 puts "What's your Hamster's name?"
 name = gets.chomp
 puts "On a scale of one to 10 how lound is your hamster?"
@@ -50,8 +54,26 @@ volume = gets.chomp.to_i
 puts "What color is #{name}'s fur"
 fur = gets.chomp
 puts "How old is #{name}"
+<<<<<<< HEAD
 age = gets.chomp.to_i
 
 new_hamster = Hamster.new(name, fur, volume, age)
 p new_hamster.hamster
 
+=======
+age = gets.chomp
+#gives variable "age" the value of nil if user leaves it blank
+if age.length == 0
+	age = nil
+end
+
+puts "Hello #{name}"
+if volume >= 6
+	puts "You've got loud one"
+else
+	puts "You've got a quiet one"
+end
+puts "#{fur} is a pretty color!"
+
+puts "your pet is #{age} years old?"
+>>>>>>> master
