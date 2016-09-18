@@ -15,7 +15,6 @@ module Printer
 			end
 		end
 	end
-
 	# def update_info(application, name, field, new_info)
 		
 	# 	application[name][field] = new_info
@@ -35,10 +34,13 @@ class Home_Decor
 		# @fave_shade_of_blue = fave_shade_of_blue
 		# @wallpaper_prefernces =wallpaper_prefernces
 		# @ombre = ombre
-		# # @applicants = applicants
+		# @applicants = applicants
 		p "applicant initialization..."
 	end
 	include Printer
+	def update(applicant_hash, field, new_info)
+		applicant_hash[name] =name
+	end
 end
 
 
@@ -82,13 +84,17 @@ p 'What do you think of ombre?'
 	ombre_is = gets.chomp
 	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
 
-new_applicant = Home_Decor.new #(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
+new_applicant = Home_Decor.new#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 index = index + 1
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp
 end
 end
+puts
 p application
+puts
+p new_applicant
+puts
 new_applicant.print(application)
 
 
@@ -111,16 +117,26 @@ p aplicanthash
 =end
 
 
-# p 'Would you like to change any of your answers?'
+# p 'Would you like to update any applicant info?(y/n)'
 # change = gets.chomp
+# 	if change =='y'
+# 	p 'which applicant?'
+# 		name = gets.chomp
+# 	p 'Put in the number of the  field you would like to adjust?'
+# 	p '(#1.name, #2.address, #3.email, #4.Phone Number, #5.Favorite shade of blue, #6.wallpaper prefernces, #7.Thoughts on ombre)'
+# 	field_num = gets.chomp.to_i
+# 	p 'New info!'
+# 	new_info = gets.chomp
 
-# if change =='yes'
-# p 'Which field would you like to adjust?'
-# key = gets.chomp.to_sym
-# p 'new info'
-# new_value = gets.chomp
-# application[key] = new_value
-# p application
-# else
-# puts "Ok, Bye #{application[name]}"
-# end 
+# 	if field_num == 1
+# 		field = "Applicant: #{index}: #{name}"
+# 	new_applicant
+
+
+
+
+	# application[key] = new_value
+	# p application
+	# else
+	# puts "Ok, Bye #{application[name]}"
+	# end 
