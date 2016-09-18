@@ -1,3 +1,10 @@
+=begin class app
+def in {name, add, em, phonnum, faveblu, wall, om// applicationhash}
+def print aplicationhash
+def update key
+=end
+
+
 #create empty application hash
 application = Hash.new
 #Prompt user for application info and and it to the application hash
@@ -17,14 +24,19 @@ p "What is you're wallpaper prefernces?"
 p 'What do you think of ombre?'
 	application[:Ombre_is] = gets.chomp
 
-#printing hash keys and values
-p application.keys
+# #printing hash keys and values
+# p application.keys
 
-p application.values
-# print hash
-p application
+# p application.values
+# # print hash
+# p application
 
 #give user opportunity to update a key
+puts "HOME DECOR APPLICATION:"
+application.each {|info, input | 
+	puts " #{info}: #{input}"
+}
+
 p 'Would you like to change any of your answers?'
 change = gets.chomp
 
@@ -36,5 +48,5 @@ new_value = gets.chomp
 application[key] = new_value
 p application
 else
-p 'Ok, Bye #{:name}'
+puts "Ok, Bye #{application[:name]}"
 end 
