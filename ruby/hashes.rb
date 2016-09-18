@@ -4,29 +4,38 @@ def print aplicationhash
 def update key
 =end
 module Printer
-	def print(application)
-		
+	def print(application)		
 		application.each do |applicant, info|
 		puts "*********************************************************" 
 		puts "HOME DECOR APPLICATION:"
 		puts "#{applicant}:"
-		info.each {|k,v| 
+		info.each do |k,v| 
 			puts "-----------"
-			puts "#{k} : #{v}"}
-		# 
+			puts "#{k} : #{v}"
+			end
 		end
 	end
+
+	# def update_info(application, name, field, new_info)
+		
+	# 	application[name][field] = new_info
+	# 	p application
+	# 	else
+	# 	puts "Ok, Bye #{application[name]}"
+	# 	end 
+
+	# end
 end
 class Home_Decor
-	def initialize(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
-		@name = name
-		@address =address
-		@email =email
-		@phone = phone
-		@fave_shade_of_blue = fave_shade_of_blue
-		@wallpaper_prefernces =wallpaper_prefernces
-		@ombre = ombre
-		# @applicants = applicants
+	 def initialize#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
+		# @name = name
+		# @address =address
+		# @email =email
+		# @phone = phone
+		# @fave_shade_of_blue = fave_shade_of_blue
+		# @wallpaper_prefernces =wallpaper_prefernces
+		# @ombre = ombre
+		# # @applicants = applicants
 		p "applicant initialization..."
 	end
 	include Printer
@@ -73,7 +82,7 @@ p 'What do you think of ombre?'
 	ombre_is = gets.chomp
 	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
 
-new_applicant = Home_Decor.new(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
+new_applicant = Home_Decor.new #(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 index = index + 1
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp
@@ -81,6 +90,8 @@ end
 end
 p application
 new_applicant.print(application)
+
+
 
 
 =begin
