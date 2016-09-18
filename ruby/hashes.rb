@@ -45,32 +45,32 @@ until x == "n"
 p 'Welcome New Applicant! Please provide us with some basic info'
 p 'Name:'
 	name = gets.chomp
-	application[name] = Array.new
+	application[name] = Hash.new
 p 'Address:'
 	address = gets.chomp
-	application[name] << address
+	application[name]["Address"] = address
 p 'Email:'
 	email = gets.chomp
-	application[name] << email
+	application[name]["Email"] = email
 p 'Phone number:'
 	phone = gets.chomp
-	application[name] << phone
+	application[name]["Phone number"] = phone
 p 'What is your favorite shade of blue?'
 	fave_shade_of_blue = gets.chomp
-	application[name] << fave_shade_of_blue
+	application[name]["favorite shade of blue"] = fave_shade_of_blue
 p "What is you're wallpaper prefernces?"
 	wallpaper_prefernces = gets.chomp
-	application[name] << wallpaper_prefernces
+	application[name]["wallpaper prefernces"]  = wallpaper_prefernces
 p 'What do you think of ombre?'
 	ombre_is = gets.chomp
-	application[name] << ombre_is
+	application[name]["Thoughts on ombre..."] = ombre_is
 
 new_applicant = Home_Decor.new(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp
 end
-
-new_applicant.print(application)
+p application
+# new_applicant.print(application)
 
 
 =begin
