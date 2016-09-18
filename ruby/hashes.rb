@@ -3,7 +3,14 @@ def in {name, add, em, phonnum, faveblu, wall, om// applicationhash}
 def print aplicationhash
 def update key
 =end
-
+module Printer
+	def print(application)
+		puts "HOME DECOR APPLICATION:"
+		application.each do |info, input | 
+		puts " #{info}: #{input}"
+		end
+	end
+end
 class Home_Decor
 	def initialize(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
 		@name = name
@@ -13,8 +20,10 @@ class Home_Decor
 		@fave_shade_of_blue = fave_shade_of_blue
 		@wallpaper_prefernces =wallpaper_prefernces
 		@ombre = ombre
-		@applicants = {}
+		# @applicants = applicants
+		p "applicant initialization..."
 	end
+	include Printer
 end
 
 
@@ -35,59 +44,62 @@ until x == "n"
 
 p 'Welcome New Applicant! Please provide us with some basic info'
 p 'Name:'
-	:name = gets.chomp
-	application[:name] = []
+	name = gets.chomp
+	application[name] = Array.new
 p 'Address:'
-	:address = gets.chomp
-	application[:name][:address]
+	address = gets.chomp
+	application[name] << address
 p 'Email:'
-	application[:email][i] = gets.chomp
+	email = gets.chomp
+	application[name] << email
 p 'Phone number:'
-	application[:phone][i] = gets.chomp
+	phone = gets.chomp
+	application[name] << phone
 p 'What is your favorite shade of blue?'
-	application[:fave_shade_of_blue][i] = gets.chomp
+	fave_shade_of_blue = gets.chomp
+	application[name] << fave_shade_of_blue
 p "What is you're wallpaper prefernces?"
-	application[:wallpaper_prefernces][i] = gets.chomp
+	wallpaper_prefernces = gets.chomp
+	application[name] << wallpaper_prefernces
 p 'What do you think of ombre?'
-	application[:Ombre_is][i] = gets.chomp
+	ombre_is = gets.chomp
+	application[name] << ombre_is
 
-new_applicant = Home_Decor.new(:name, :address, :email, :phone, :fave_shade_of_blue, :wallpaper_prefernces, :Ombre_is)
+new_applicant = Home_Decor.new(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp
-
-i =+ 1
 end
 
+new_applicant.print(application)
 
 
 =begin
 each_with_index
 push "apphash#{index}" =[#{apphash[index]}]  to applicanthash
 p aplicanthash
-=end
 # #printing hash keys and values
 # p application.keys
 
 # p application.values
 # # print hash
+
+=end
 # p application
-
+=begin
 #give user opportunity to update a key
-puts "HOME DECOR APPLICATION:"
-application.each {|info, input | 
-	puts " #{info}: #{input}"
-}
+=end
 
-p 'Would you like to change any of your answers?'
-change = gets.chomp
 
-if change =='yes'
-p 'Which field would you like to adjust?'
-key = gets.chomp.to_sym
-p 'new info'
-new_value = gets.chomp
-application[key] = new_value
-p application
-else
-puts "Ok, Bye #{application[:name]}"
-end 
+# p 'Would you like to change any of your answers?'
+# change = gets.chomp
+
+# if change =='yes'
+# p 'Which field would you like to adjust?'
+# key = gets.chomp.to_sym
+# p 'new info'
+# new_value = gets.chomp
+# application[key] = new_value
+# p application
+# else
+# puts "Ok, Bye #{application[name]}"
+# end 
