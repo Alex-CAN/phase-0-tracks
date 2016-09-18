@@ -9,7 +9,7 @@ music_library = {
 			rank_1: 'Drake',
 			rank_2: 'The Weekend',
 			rank_3: 'Fetty Wap',
-			rank_4: 'Nicki Man',
+			rank_4: 'Nicki Manj',
 			rank_5: 'J Cole',
 		}
 	},
@@ -50,4 +50,5 @@ music_library = {
 p music_library[:genre_rap][:recently_viewed]['Young Jeezy']
 p music_library[:genre_rock][:recently_viewed]
 p music_library[:genre_edm][:genre_name]
+music_library[:genre_edm][:top_5_2016][:rank_6] = 'tiesto'
 p music_library[:genre_edm][:top_5_2016]
