@@ -54,3 +54,8 @@ p music_library[:genre_edm][:top_5_2016]
 
 music_library[:genre_edm][:recently_viewed][:porter_robinson] = ['shelter','sad machine']
 p music_library[:genre_edm][:recently_viewed]
+
+music_library[:genre_rap][:recently_viewed][:kendrick_lamar] << 'dive in'
+
+p music_library[:genre_rap][:recently_viewed]
+
