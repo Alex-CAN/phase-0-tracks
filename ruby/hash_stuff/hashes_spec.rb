@@ -1,4 +1,5 @@
 require_relative 'HomeDecor'
+require_relative 'Printer'
 
 describe HomeDecor do
 	# let(:calculator) {Calculator.new}

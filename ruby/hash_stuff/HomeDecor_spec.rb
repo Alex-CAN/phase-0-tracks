@@ -1,11 +1,12 @@
-require_relative 'hashes'
+require_relative 'HomeDecor'
+# require_relative 'Printer'
 
 describe HomeDecor do
 	# let(:calculator) {Calculator.new}
 
-	# it "adds" do
+	it "adds" do
 	# 	# expect(calculator.add(1,3)).to eq 4
-	# end
+	end
 	# it "subtracts two integers" do
 	#     # expect(calculator.subtract(7,1)).to eq 6
 	#   end
