@@ -2,14 +2,14 @@ music_library = {
 	genre_rap:{
 		genre_name: 'RAP',
 		recently_viewed:{
-			Kendrick_Lamar: ['King Kunta','Alright',],
+			kendrick_lamar: ['King Kunta','Alright',],
 			'Young Jeezy' => 'Forgive Me'
 		},
 		top_5_2016: {
 			rank_1: 'Drake',
 			rank_2: 'The Weekend',
 			rank_3: 'Fetty Wap',
-			rank_4: 'Nicki Man',
+			rank_4: 'Nicki Manj',
 			rank_5: 'J Cole',
 		}
 	},
@@ -18,7 +18,7 @@ music_library = {
 		genre_name: 'ROCK',
 		recently_viewed:{
 			'She Wants Revenge' => 'Tear You Apart',
-			Coheed_Cambria: ['The Suffering', 'Blood Red Summer']
+			coheed_cambria: ['The Suffering', 'Blood Red Summer']
 		},
 		top_5_2016: {
 			rank_1: 'Fall Out Boy',
@@ -50,4 +50,17 @@ music_library = {
 p music_library[:genre_rap][:recently_viewed]['Young Jeezy']
 p music_library[:genre_rock][:recently_viewed]
 p music_library[:genre_edm][:genre_name]
+<<<<<<< HEAD
 p music_library[:genre_edm][:top_5_2016]
+
+music_library[:genre_edm][:recently_viewed][:porter_robinson] = ['shelter','sad machine']
+p music_library[:genre_edm][:recently_viewed]
+
+music_library[:genre_rap][:recently_viewed][:kendrick_lamar] << 'dive in'
+
+p music_library[:genre_rap][:recently_viewed]
+
+=======
+music_library[:genre_edm][:top_5_2016][:rank_6] = 'tiesto'
+p music_library[:genre_edm][:top_5_2016]
+>>>>>>> 5.2
