@@ -25,7 +25,7 @@ module Printer
 
 	# end
 end
-class Home_Decor
+class HomeDecor
 	 def initialize#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
 		# @name = name
 		# @address =address
@@ -38,9 +38,9 @@ class Home_Decor
 		p "applicant initialization..."
 	end
 	include Printer
-	def update(applicant_hash, field, new_info)
-		applicant_hash[name] =name
-	end
+	# def update(applicant_hash, field, new_info)
+	# 	applicant_hash[name] =name
+	# end
 end
 
 
@@ -84,7 +84,7 @@ p 'What do you think of ombre?'
 	ombre_is = gets.chomp
 	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
 
-new_applicant = Home_Decor.new#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
+new_applicant = HomeDecor.new#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 index = index + 1
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp
