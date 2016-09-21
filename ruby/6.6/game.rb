@@ -10,6 +10,7 @@ class Guessing
 	end
 
 	def your_word(guess)
+<<<<<<< HEAD
 		# @right_answer.map.with_index { |letter, index| 
 		# 	if letter = guess
 		# 	end
@@ -20,6 +21,8 @@ class Guessing
 		# @guesser_word[index] = guess
 		# end
 		# p @guesser_word.join
+=======
+>>>>>>> 4.4
 		@right_answer.each_index {|index|
 			if @right_answer[index] == guess
 			@guesser_word[index] = guess
@@ -31,6 +34,7 @@ class Guessing
 
 	def guess_check(guess)
 		check = []
+<<<<<<< HEAD
 		guess.each { |letter| 
 			if !@right_answer.include?(letter)
 				check <<  "x"
@@ -42,6 +46,18 @@ class Guessing
 		 	"SORRY YOU LOSE!"
 		else
 			"WINNER!"
+=======
+		guess.each_index { |index| 
+			if @right_answer[index] == guess[index]
+				check <<  guess[index]
+			end
+		}
+		
+		if check.include?(@right_answer.join)
+		 	"WINNER!""SORRY YOU LOSE!"
+		else
+			"SORRY YOU LOSE!"
+>>>>>>> 4.4
 		end
 	end
 end
@@ -59,12 +75,24 @@ p "Player two make a guess"
 guess = gets.chomp
 p game.your_word(guess)
 # p answer
+<<<<<<< HEAD
 final << guess	
 break if game.your_word(guess) == answer.join
 end
 
 p answer
 p game.guess_check(final)
+=======
+final << guess
+break if final.length == answer.length	
+# # final << guess
+# end
+break if game.your_word(guess) == answer.join
+p final
+end
+
+ p game.guess_check(final)
+>>>>>>> 4.4
 
 
 
@@ -75,4 +103,7 @@ p game.guess_check(final)
 
 
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 4.4
