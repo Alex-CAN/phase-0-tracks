@@ -1,4 +1,4 @@
-letters = ["a", "b", "c", "d", "e"]
+letters = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p"]
 new_letters = []
 
 puts "Original data:"
@@ -30,7 +30,7 @@ letters.each_index do |index|
 letter_hash[letters[index]] = (index + 1)
 end
 
-p letter_hash
+letter_hash.each {|x,y| puts "#{x} : #{y}"}
 
 
 
