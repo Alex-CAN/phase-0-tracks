@@ -39,3 +39,24 @@ rinse toothbrush
 spit
 TURN OFF FAUCET
  put away toothbrush
+
+Take out Trash Psuedocode
+check date. if date = wednesday start in room 1
+pick plastic bag up out of trash can
+place bag beside can
+put new empty bag in can
+carry full garbage bag to room 2
+pick plastic bag up out of trash can
+place bag beside can
+put new empty bag in can
+carry full garbage bags to room 3
+pick plastic bag up out of trash can
+place bag beside can
+put new empty bag in can
+carry full garbage bags to room 4
+pick plastic bag up out of trash can
+place bag beside can
+put new empty bag in can
+carry full garbage bags to main garbage can outside
+drag main garbage can to designated trash curb
+wash hands

@@ -25,7 +25,7 @@ module Printer
 
 	# end
 end
-class Home_Decor
+class HomeDecor
 	 def initialize#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
 		# @name = name
 		# @address =address
@@ -41,11 +41,38 @@ class Home_Decor
 	def update(applicant_hash, field, new_info)
 		applicant_hash[name] =name
 	end
+
+	def app
+		# application = Hash.new
+# 	p 'Welcome New Applicant! Please provide us with some basic info'
+# p 'Name:'
+# 	name = gets.chomp	
+# 	application["Applicant: #{index}: #{name}"] = {}
+# p 'Address:'
+# 	address = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Address"] = address
+# p 'Email:'
+# 	email = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Email"] = email
+# p 'Phone number:'
+# 	phone = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Phone number"] = phone
+# p 'What is your favorite shade of blue?'
+# 	fave_shade_of_blue = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["favorite shade of blue"] = fave_shade_of_blue
+# p "What is you're wallpaper prefernces?"
+# 	wallpaper_prefernces = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["wallpaper prefernces"]  = wallpaper_prefernces
+# p 'What do you think of ombre?'
+# 	ombre_is = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
+		
+	end
 end
 
 
 #create empty application hash
-application = Hash.new
+# application = Hash.new
 #Prompt user for application info and and it to the application hash
 =begin empty applicant hash
 loop: submit new applicant(y/n)
@@ -61,30 +88,30 @@ if index < 1
 
 until x == "n"
 
-p 'Welcome New Applicant! Please provide us with some basic info'
-p 'Name:'
-	name = gets.chomp	
-	application["Applicant: #{index}: #{name}"] = {}
-p 'Address:'
-	address = gets.chomp
-	application["Applicant: #{index}: #{name}"]["Address"] = address
-p 'Email:'
-	email = gets.chomp
-	application["Applicant: #{index}: #{name}"]["Email"] = email
-p 'Phone number:'
-	phone = gets.chomp
-	application["Applicant: #{index}: #{name}"]["Phone number"] = phone
-p 'What is your favorite shade of blue?'
-	fave_shade_of_blue = gets.chomp
-	application["Applicant: #{index}: #{name}"]["favorite shade of blue"] = fave_shade_of_blue
-p "What is you're wallpaper prefernces?"
-	wallpaper_prefernces = gets.chomp
-	application["Applicant: #{index}: #{name}"]["wallpaper prefernces"]  = wallpaper_prefernces
-p 'What do you think of ombre?'
-	ombre_is = gets.chomp
-	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
+# p 'Welcome New Applicant! Please provide us with some basic info'
+# p 'Name:'
+# 	name = gets.chomp	
+# 	application["Applicant: #{index}: #{name}"] = {}
+# p 'Address:'
+# 	address = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Address"] = address
+# p 'Email:'
+# 	email = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Email"] = email
+# p 'Phone number:'
+# 	phone = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Phone number"] = phone
+# p 'What is your favorite shade of blue?'
+# 	fave_shade_of_blue = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["favorite shade of blue"] = fave_shade_of_blue
+# p "What is you're wallpaper prefernces?"
+# 	wallpaper_prefernces = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["wallpaper prefernces"]  = wallpaper_prefernces
+# p 'What do you think of ombre?'
+# 	ombre_is = gets.chomp
+# 	application["Applicant: #{index}: #{name}"]["Thoughts on ombre..."] = ombre_is
 
-new_applicant = Home_Decor.new#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
+new_applicant = HomeDecor.new#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre_is)
 index = index + 1
 puts "Would you like to apply to Home Decor?(y/n)?"
 x = gets.chomp

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All About Alex</title>
+</head>
+<body style="background-color:powderblue;">
+	<h1>Hello World!</h1>
+	<h2>I'm <strong>Alex</strong></h2>
+	<p> Here are some things about <em>ME</em>!
+	<p style="font-family:courier;"><strong>Personality!</strong></p>
+	<ul>
+		<li><u>Joyous</u></li>
+			<p>My Abuela told me once that you can't be happy all the time, but true joy comes from the heart, it's your spirit. If you have joy you have joy you don't have to worry about being happy, because your truest self at it's core will be illminated by this joy.
+		<li><u>Loyal</u></li>
+			<P> I was asked one day, "When you meet someone do you give them the benefit of the doubt that they're a good person or do you have your guard up and they have to prove themselves?" It was then that I realized I had been so blessed for so many years to have met amazing people and made great friends life-long friends. They're irreplaceable and as I get older I know to never take them for granted. 
+		<li><u>Honest</u></li>
+			<p>The simplest thing in life is truth.</p>
+	</ul>
+	<p style="font-family:courier;"><strong>Favorite Foods!</strong></p>
+	<ol>
+		<li>Homemade Mac & Cheese</li>
+		<li>Pork BBQ Ribs</li>
+		<li>Ox Tails</li>
+		<li>Crab</li>
+	</ol>
+	<p style="font-family:courier;"><strong>Hobbies!</strong></p>
+	<ol>
+		<li>Dance</li>
+		<li>Meditation</li>
+		<li>Photography</li>
+		<li>Sleep</li>
+	</ol>
+</body>
+</html>

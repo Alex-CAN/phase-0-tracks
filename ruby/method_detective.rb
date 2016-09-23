@@ -25,7 +25,7 @@
 # "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-p "The mystery of the missing first letter".delete[0]
+# p "The mystery of the missing first letter".delete[0]
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".squeeze(" ")
