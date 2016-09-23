@@ -24,13 +24,6 @@ numbers.each do |digit, word|
   puts "#{digit} is spelled out as #{word}"
 end
 
-letter_hash = {}
-
-letters.each_index do |index|
-letter_hash[letters[index]] = (index + 1)
-end
-
-p letter_hash
 
 
 
