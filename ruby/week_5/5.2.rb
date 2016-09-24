@@ -32,7 +32,7 @@ end
 
 def display(application)
 	application.each do |key, value|
-	puts "========APPLICANT: application[:applicants][#{application[:applicants]}]=========="
+	puts "========APPLICANT: #{application[:applicants][0]}=========="
 	puts "#{value}"
 	end
 
