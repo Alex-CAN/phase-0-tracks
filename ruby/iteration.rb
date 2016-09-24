@@ -1,108 +1,76 @@
-<<<<<<< HEAD
+letters = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p"]
+new_letters = []
 
-# def sort_stuff(arr)
-# 	index = 0
-# 	while arr[index] < arr.length
-# 		if arr[x] < arr[x+1]
-# 			arr[x]= arr[x+1]
-# 		end
-# 	index += 1
-# 	end
-# 	return arr
-# end
+puts ":::Original data:::"
+p letters
+p new_letters
 
-# a =[ 45, 3, 28, 19]
-
-# p sort_stuff (a)
-
-def sort_stuff(arr)
-	arr.each_index do |x|
-		if arr[x] > arr[x].next
-			arr[x] = arr[x+1]
-=======
-# coffeeshops = ["Starbucks", "Petes", "Philz", "Sojuus", "Coffee Bar"]
-
-# def coffeeyum (a)
-#     a.each {|x| puts "#{x} is the best coffeshop!"}
-# end
-
-# coffeeyum(coffeeshops)
-
-
-# def himethod(a)
-# a.map! do |c|
-# c.upcase
-# end
-# end
-
-# himethod(coffeeshops)
-
-# new_coffeeshop = coffeeshops.map  do |d| d + "!" end
-
-# p new_coffeeshop
-
-
-# coffeedrinks = {starbucks: "Pumpkin Spice",
-# petes: "Americano",
-# philz: "Mint Coffee",
-# sojuus: "Chai",
-# coffebar: "vegan juice"}
-
-# coffeedrinks.each do |coffeeplace, drinkz| puts "#{coffeeplace} is the best coffeeshop and the #{drinkz} is the best drink ever!" end
-
-# def delete_me(arr)
-# 	arr.each do |x| 
-# 		if x < 3
-# 			arr.delete(x)
-# 		end
-# 	end
-# end
-
-# a = [1, 2, 3, 4]
-
-# p delete_me(a)
-
-def delete_me(arr, value)
-	arr.each do |x|
-		if x < value
-			arr.delete(x)
->>>>>>> 5947d7211f2e2f7fa98b373676e2edf55ef86164
-		end
-	end
+# iterate through the array with .each
+letters.each do |letter| 
+  new_letters << letter.next
 end
 
-<<<<<<< HEAD
-a =[ 45, 3, 28, 19]
+puts "After .each call:"
+p letters
+p new_letters
 
-p sort_stuff (a)
-=======
-a = [1, 2, 3, 4]
-p delete_me(a, 3)
+letters.map do |letter| 
+  new_letters << letter.next
+end
 
-# numbers = [1,2,3,4,5,6,7,8,9,10]
+puts "After .map call:"
+p letters
+p new_letters
+#################
 
-# even_numbers = []
+numbers = {1 => 'one', 2 => 'two', 3 => 'three'}
 
-# numbers.each do |num|
-# 	if num % 2 == 0
-# 		puts num
-# 		even_numbers.push(num)
-# 	end
-# end
+# iterate through the hash with .each
 
-# def remove_stuff (arr)
-# 	arr.each do |x|
-# 		if x % 2 == 0
-# 			arr.delete(x)
-# 		end
-# 	end
-# end
+numbers.each do |digit, word|
+  puts "#{digit} is spelled out as #{word}"
+end
 
-# numbers = [1,2,3,4,5,6,7,8,9,10]
+letter_hash = {}
 
-# p remove_stuff (numbers)
+letters.each_index do |index|
+letter_hash[letters[index]] = (index + 1)
+end
+
+letter_hash.each {|x,y| puts "#{x} : #{y}"}
+
+
+letter_hash.delete_if {|let, num| num > 5}
+p letter_hash
+
+letter_hash.each {|x,y| puts "#{x} : #{y}"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			
 
 
->>>>>>> 5947d7211f2e2f7fa98b373676e2edf55ef86164
