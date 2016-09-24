@@ -2,7 +2,7 @@ class FashionShow
 
 	def initialize
 		@catalog = {}
-		@model_lineup =model_lineup = {
+		@model_lineup = model_lineup = {
 			"Gisele Bundchen" => {designer: "Versace", outfit: "Little Black Dress", rank: ""},
 			"Naomi Campbel" => {designer: "Vouge", outfit: "Silver Gown", rank: ""},
 			"Kate Moss" => {designer: "Jamie Hince", outfit: "Blue Frock", rank: ""},
@@ -13,20 +13,28 @@ class FashionShow
 	end
 
 	def call
-		p catwalk
+		 catwalk
 	end
 	# method introduces <model> and <designer> to runway
 	def enter_runway
 		if @walking
-			@model_lineup.each {|model, info|
-		puts "Now entering the walk way is #{model} wearing #{info.first}"}
+			@model_lineup.each do |model, info|
+		puts "Now entering the walk way is #{model} wearing #{info.values_at(:outfit)} by #{info.values_at(:designer)}"
+		puts "Rank #{model}."
+		rank = gets.chomp
+		info[:rank] = rank
+			end
 		end
-	
 	end
+	def rank_model
+		@model_lineup
+	end
+
 	# method {enter_runway}. Presents <model>s <outfit>. logs <model><designer><outfit><rank> to catalog. {exit_runway}. 
 	def catwalk
 		@walking
-		puts enter_runway
+		enter_runway
+
 		# @model_lineup.each {|model, info| p "#{key} , #{info[0]}, info[1]"}
 	end
 	# method exits <model> from runway
@@ -44,7 +52,7 @@ end
 
 
 new_show = FashionShow.new
-p new_show.call
+new_show.call
 
 =begin (1)upon intialization of Fashion show class user is prompted to enter fashion show.
 (2)if yes model enters.
@@ -58,7 +66,7 @@ p new_show.call
 
 
 # (1)
-# puts "Welcome to My Hashion Show (All puns intended)! Would you like to enter?(y/)"
+# puts "Welcome to My Hashion Show (All puns intended)! Would you like to enter?(y/n)"
 # enter = gets.chomp.downcase
 # #(2)
 # 	if enter == "y"
