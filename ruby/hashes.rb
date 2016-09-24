@@ -15,15 +15,15 @@ module Printer
 			end
 		end
 	end
-	# def update_info(application, name, field, new_info)
+	def update_info(application, name, field, new_info)
 		
-	# 	application[name][field] = new_info
-	# 	p application
-	# 	else
-	# 	puts "Ok, Bye #{application[name]}"
-	# 	end 
+		application[name][field] = new_info
+		p application
+		else
+		puts "Ok, Bye #{application[name]}"
+		end 
 
-	# end
+	end
 end
 class Home_Decor
 	 def initialize#(name, address, email, phone, fave_shade_of_blue, wallpaper_prefernces, ombre)
@@ -117,26 +117,26 @@ p aplicanthash
 =end
 
 
-# p 'Would you like to update any applicant info?(y/n)'
-# change = gets.chomp
-# 	if change =='y'
-# 	p 'which applicant?'
-# 		name = gets.chomp
-# 	p 'Put in the number of the  field you would like to adjust?'
-# 	p '(#1.name, #2.address, #3.email, #4.Phone Number, #5.Favorite shade of blue, #6.wallpaper prefernces, #7.Thoughts on ombre)'
-# 	field_num = gets.chomp.to_i
-# 	p 'New info!'
-# 	new_info = gets.chomp
+p 'Would you like to update any applicant info?(y/n)'
+change = gets.chomp
+	if change =='y'
+	p 'which applicant?'
+		name = gets.chomp
+	p 'Put in the number of the  field you would like to adjust?'
+	p '(#1.name, #2.address, #3.email, #4.Phone Number, #5.Favorite shade of blue, #6.wallpaper prefernces, #7.Thoughts on ombre)'
+	field_num = gets.chomp.to_i
+	p 'New info!'
+	new_info = gets.chomp
 
-# 	if field_num == 1
-# 		field = "Applicant: #{index}: #{name}"
-# 	new_applicant
-
-
+	if field_num == 1
+		field = "Applicant: #{index}: #{name}"
+	new_applicant
 
 
-	# application[key] = new_value
-	# p application
-	# else
-	# puts "Ok, Bye #{application[name]}"
-	# end 
+
+
+	application[key] = new_value
+	p application
+	else
+	puts "Ok, Bye #{application[name]}"
+	end 
