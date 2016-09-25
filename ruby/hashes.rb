@@ -1,8 +1,3 @@
-=begin class app
-def in {name, add, em, phonnum, faveblu, wall, om// applicationhash}
-def print aplicationhash
-def update key
-=end
 module Printer
 	def print(application)		
 		application.each do |applicant, info|
@@ -19,9 +14,7 @@ module Printer
 		
 		application[name][field] = new_info
 		p application
-		else
-		puts "Ok, Bye #{application[name]}"
-		end 
+		
 
 	end
 end
@@ -38,9 +31,6 @@ class Home_Decor
 		p "applicant initialization..."
 	end
 	include Printer
-	def update(applicant_hash, field, new_info)
-		applicant_hash[name] =name
-	end
 end
 
 
@@ -98,45 +88,57 @@ puts
 new_applicant.print(application)
 
 
-
-
-=begin
-each_with_index
-push "apphash#{index}" =[#{apphash[index]}]  to applicanthash
-p aplicanthash
-# #printing hash keys and values
-# p application.keys
-
-# p application.values
-# # print hash
-
-=end
-# p application
-=begin
-#give user opportunity to update a key
-=end
-
-
 p 'Would you like to update any applicant info?(y/n)'
 change = gets.chomp
 	if change =='y'
 	p 'which applicant?'
-		name = gets.chomp
+		applicant_name = gets.chomp
 	p 'Put in the number of the  field you would like to adjust?'
-	p '(#1.name, #2.address, #3.email, #4.Phone Number, #5.Favorite shade of blue, #6.wallpaper prefernces, #7.Thoughts on ombre)'
-	field_num = gets.chomp.to_i
+	p '(name, address, email, Phone Number, Favorite shade of blue, wallpaper prefernces, Thoughts on ombre)'
+	field = gets.chomp.to_i
 	p 'New info!'
 	new_info = gets.chomp
-
-	if field_num == 1
-		field = "Applicant: #{index}: #{name}"
-	new_applicant
-
-
-
-
-	application[key] = new_value
-	p application
 	else
-	puts "Ok, Bye #{application[name]}"
-	end 
+		puts "Ok, Bye"
+		end 
+
+
+new_applicant.update_info(application,applicant_name, field,new_info)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# if field_num == 1
+	# 	field = "Applicant: #{index}: #{name}"
+	# new_applicant
+
+
+
+
+	# application[key] = new_value
+	# p application
+	# else
+	# puts "Ok, Bye #{application[name]}"
+	# end 
