@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 def secret_name 
   first = 'sally'
   last = 'sod'
@@ -6,7 +6,7 @@ def secret_name
 end
 
 p secret_name { |first, last|  p last.chars  first.chars}
-=======
+
  class AliasMaker
 	def new_name(first, last)
 		first_name = first
@@ -62,4 +62,4 @@ one = gets.chomp.chars
 name = AliasMaker.new
 
 puts name.new_name(one,two)
->>>>>>> master
+
