@@ -27,4 +27,8 @@ puts translate("howdy!!!")
 # petes: "Americano",
 # philz: "Mint Coffee",
 # sojuus: "Chai",
+<<<<<<< HEAD
 # coffebar: "vegan juice
+=======
+# coffebar: "vegan juice"}
+>>>>>>> 5.5

@@ -10,6 +10,7 @@
 # p fib(5)
 
 
+<<<<<<< HEAD
 # def fib(x)
 # 	fib_arr = [0,1]
 # 	index = 0
@@ -25,3 +26,14 @@ def try_stuff(x)
 end
 
 try_stuff(5)
+=======
+def fib(x)
+	fib_arr = [0,1]
+	index = 0
+	x.times 
+	fib_arr << fib_arr[0] + fib_arr[1]
+	index += 1
+end
+
+p fib (6)
+>>>>>>> 5.5
