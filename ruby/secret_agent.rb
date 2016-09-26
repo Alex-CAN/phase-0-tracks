@@ -38,10 +38,15 @@ end
 
 puts "Welcom Agent, to get your new top secret name we'll need you to  input your first and last name"
 puts "For example: 'John Doe' "
-name = gets.chomp.split
+name = gets.chomp.downcase.split
 first = name[0]
 last = name[1]
 first_name = last.chars
 last_name = first.chars
 
-p secret_agent(first_name, last_name )
+# secret_agent(first_name, last_name ).split
+puts
+puts "============================================================================================================"
+
+puts "Agent #{name[0].capitalize} #{name[1].capitalize}"
+puts "Your new alias is #{secret_agent(first_name, last_name )}"
