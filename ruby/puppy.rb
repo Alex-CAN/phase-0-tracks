@@ -16,14 +16,42 @@
 # beg
 # simultaneously be the most annoying and adorable thing in the room
 
-class Puppy
+class Palmeranian
 end
 
-chai = Puppy.new
-cavi = Puppy.new
-coco = Puppy.new
+chai = Palmeranian.new
+cavi = Palmeranian.new
+coco = Palmeranian.new
 
 p coco.class
 p cavi == chai
 p chai.instance_of?(Array)
-p chai.instance_of?(Puppy)
+p chai.instance_of?(Palmeranian)
+
+puts
+puts "==================================================================================================================="
+puts
+
+# <<<<<<<<<<<<<<<<<<<<<<< SPECIES NAME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# husky
+
+# <<<<<<<<<<<<<<<<<<<<<<<<< Characteristics >>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# hair length = short - poofy
+# color = varies
+# friendly? = varies
+# size = medium - large
+
+# <<<<<<<<<<<<<<<<<<<<<<< Behavior >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# bark
+# guard
+# run
+# play
+
+
+class Husky
+end
+
+shea = Husky.new
+
+p shea.class
