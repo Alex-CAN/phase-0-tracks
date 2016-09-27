@@ -9,16 +9,16 @@
   # Iterate through the array list, and add each item-quantity pair into hash list
   # print the list to the console
 # output: Hash list
-
-def create_list(str, default_quantity=1)
-  list = {}
-  item_array = str.split
-  item_array.each do |item|
-    list[item] = default_quantity
-  end
-  print_list(list)
-  return list
-end
+class GroceryList
+	def create_list(str, default_quantity=1)
+	  list = {}
+	  item_array = str.split
+	  item_array.each do |item|
+	    list[item] = default_quantity
+	  end
+	  print_list(list)
+	  return list
+	end
 
 # Method to add an item to a list
 # input: item name, list, quantity
@@ -64,7 +64,12 @@ def print_list(list)
   end
 end
 
-test_string = "Apple Grape Cabbage"
+end
+
+
+
+# test code
+=begin test_string = "Apple Grape Cabbage"
 list_1 = create_list(test_string)
 
 add_item("Tea", list_1, 3)
@@ -76,3 +81,7 @@ p list_1
 update_quantity("Apple", list_1, 5)
 p list_1
 print_list(list_1)
+=end
+
+test_string = "a b c"
+list_1 = create_list(test_string)
