@@ -16,7 +16,6 @@ def create_list(str, default_quantity=1)
   item_array.each do |item|
     list[item] = default_quantity
   end
-  print_list(list)
   return list
 end
 
@@ -64,15 +63,15 @@ def print_list(list)
   end
 end
 
-test_string = "Apple Grape Cabbage"
+test_string = "a b c"
 list_1 = create_list(test_string)
 
-add_item("Tea", list_1, 3)
-p list_1
+# add_item("Tea", list_1, 3)
+# p list_1
 
-remove_item("Tea", list_1)
-p list_1
+# remove_item("Tea", list_1)
+# p list_1
 
-update_quantity("Apple", list_1, 5)
-p list_1
-print_list(list_1)
+# update_quantity("Apple", list_1, 5)
+# p list_1
+# print_list(list_1)
