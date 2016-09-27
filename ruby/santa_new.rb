@@ -69,11 +69,11 @@ puts
 more_santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-50.times do |i|
+100.times do |i|
   more_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 puts
-p more_santas
+more_santas.length.times { |x| puts "Santa #{x + 1} : #{more_santas[x]} : #{more_santas[x].gender} #{more_santas[x].ethnicity}"}
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
 
