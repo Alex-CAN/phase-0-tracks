@@ -19,10 +19,10 @@ class FashionShow
 	def enter_runway
 		if @walking
 			@model_lineup.each do |model, info|
-		puts "Now entering the walk way is #{model} wearing #{info.values_at(:outfit)} by #{info.values_at(:designer)}"
-		puts "Rank #{model}."
-		rank = gets.chomp
-		info[:rank] = rank
+				puts "Now entering the walk way is #{model} wearing #{info.values_at(:outfit)} by #{info.values_at(:designer)}"
+				puts "Rank #{model}."
+				rank = gets.chomp
+				info[:rank] = rank
 			end
 		end
 	end

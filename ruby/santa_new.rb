@@ -5,7 +5,11 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+<<<<<<< HEAD
 		@age = rand(140)
+=======
+		@age = 0
+>>>>>>> game
 		puts "Initializing Santa instance..."
 	end
 
@@ -65,6 +69,7 @@ p saint_nicholas
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
 
+<<<<<<< HEAD
 puts
 more_santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -74,6 +79,17 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 end
 puts
 more_santas.length.times { |x| puts "Santa #{x + 1} : #{more_santas[x]} : #{more_santas[x].gender} #{more_santas[x].ethnicity}"}
+=======
+# puts
+# more_santas = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do |i|
+#   more_santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+# puts
+# p more_santas[0]
+>>>>>>> game
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
 

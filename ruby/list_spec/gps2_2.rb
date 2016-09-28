@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#GPS 2.2
-=======
-#GPS 2.2# Method to create a list
-=======
 #GPS 2.2
 
 # Method to create a list
->>>>>>> game
 # input: string of items separated by spaces, optional default quantity
 # steps: 
   # Create an empty hash list
@@ -16,7 +9,6 @@
   # Iterate through the array list, and add each item-quantity pair into hash list
   # print the list to the console
 # output: Hash list
-<<<<<<< HEAD
 
 def create_list(str, default_quantity=1)
   list = {}
@@ -24,21 +16,8 @@ def create_list(str, default_quantity=1)
   item_array.each do |item|
     list[item] = default_quantity
   end
-  print_list(list)
   return list
 end
-=======
-class GroceryList
-	def create_list(str, default_quantity=1)
-	  list = {}
-	  item_array = str.split
-	  item_array.each do |item|
-	    list[item] = default_quantity
-	  end
-	  print_list(list)
-	  return list
-	end
->>>>>>> game
 
 # Method to add an item to a list
 # input: item name, list, quantity
@@ -84,32 +63,15 @@ def print_list(list)
   end
 end
 
-<<<<<<< HEAD
-test_string = "Apple Grape Cabbage"
-=======
-end
-
-
-
-# test code
-=begin test_string = "Apple Grape Cabbage"
->>>>>>> game
-list_1 = create_list(test_string)
-
-add_item("Tea", list_1, 3)
-p list_1
-
-remove_item("Tea", list_1)
-p list_1
-
-update_quantity("Apple", list_1, 5)
-p list_1
-print_list(list_1)
-<<<<<<< HEAD
->>>>>>> 6.3
-=======
-=end
-
 test_string = "a b c"
 list_1 = create_list(test_string)
->>>>>>> game
+
+# add_item("Tea", list_1, 3)
+# p list_1
+
+# remove_item("Tea", list_1)
+# p list_1
+
+# update_quantity("Apple", list_1, 5)
+# p list_1
+# print_list(list_1)
