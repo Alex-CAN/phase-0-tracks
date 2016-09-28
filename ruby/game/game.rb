@@ -25,9 +25,6 @@ class Game
 		word = secret_word.chars
 		word.each_index do |ind|
 			arr << dash(word[ind],guess_letter)
-			# if letter != guess_letter
-			# 	letter.gsub!(/["#{letter}"]/, "-")
-			# end
 		end
 		return arr.join
 	end
@@ -36,7 +33,7 @@ class Game
 		if guess == secret_word
 			"WINNER"
 		else
-			return "LOSER"
+			"LOSER"
 		end
 
 	end
@@ -49,3 +46,12 @@ end
 
 # # p new_game.decrypt("word", "r")
 # p new_game.decrypt("r")
+p 'player 1'
+word =gets.chomp
+
+new_game = Game.new(word)
+
+# word.length times get player 2's guess letter and puts decryption and psuh to a guess array
+# if guess array.include? gets guess give player another guess
+#join decrypted array and compare to word
+
