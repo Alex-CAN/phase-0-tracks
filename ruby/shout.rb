@@ -35,11 +35,11 @@
 
 module Shout
 	def yell_angry(words)
-		words + "!!!"
+		words + "!!!" + "=("
 	end
 
 	def yell_happy(words)
-		words + "!!!"
+		words + "!!!" + "=)"
 	end
 end
 
@@ -51,7 +51,20 @@ class JTHM
 	include Shout
 end
 
+class Mom
+	include Shout
+end
+
+class Dad
+	include Shout
+end
 crocket = Crocket.new
 p crocket.yell_angry("People Suck")
 jthm = JTHM.new
 p jthm.yell_happy("Suck people")
+
+mom = Mom.new
+p mom.yell_angry("clean your room")
+
+dad = Dad.new
+p dad.yell_happy("i love you")
