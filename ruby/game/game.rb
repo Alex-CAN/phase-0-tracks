@@ -55,3 +55,12 @@ new_game = Game.new(word)
 # if guess array.include? gets guess give player another guess
 #join decrypted array and compare to word
 
+guesses = word.length
+final = []
+while guesses != 0 
+	puts 'player 2'
+	guess_letter = gets.chomp
+	final << guess_letter
+	p new_game.decrypt(guess_letter)
+	guesses -= 1
+end
