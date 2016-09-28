@@ -1,5 +1,10 @@
 class Game
-	def encrypt(secret_word)
+	attr_accessor :secret_word
+
+	def initialize(secret_word)
+		@secret_word = secret_word
+	end
+	def encrypt
 		word = secret_word.chars
 		encrypted_word = []
 		word.each do|let| 
@@ -8,7 +13,7 @@ class Game
 		return encrypted_word.join
 	end
 
-	def decrypt(secret_word, guess_letter)
+	def decrypt(guess_letter)
 		word = secret_word.chars
 		word.each do |letter|
 			if letter != guess_letter

@@ -1,14 +1,14 @@
 require_relative 'game'
 
 describe Game do
-	let(:new_game) { Game.new }
+	let(:new_game) { Game.new("word") }
 
 	it "takes a password string and returns a a string of dashes" do
-		expect(new_game.encrypt("word")).to eq "----"
+		expect(new_game.encrypt).to eq "----"
 	end
 
 	it "takes a guess letter and string of dashes. returns string with dashes replaced by letter respectively. " do
-		expect(new_game.decrypt("word", "r")).to eq "--r-"
+		expect(new_game.decrypt("r")).to eq "--r-"
 	end
 
 end
