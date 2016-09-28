@@ -11,6 +11,12 @@ describe Game do
 		expect(new_game.decrypt("r")).to eq "--r-"
 	end
 
+	it "checks two strings to see if they're equal" do
+		expect(new_game.guess_check("word")).to eq "WINNER"
+		expect(new_game.guess_check("wind")).to eq "LOSER"
+	end
+
+
 end
 
 
