@@ -46,9 +46,9 @@ end
 
 # # p new_game.decrypt("word", "r")
 # p new_game.decrypt("r")
-p 'player 1'
-word =gets.chomp
 
+puts 'player 1'
+word = gets.chomp
 new_game = Game.new(word)
 
 # word.length times get player 2's guess letter and puts decryption and psuh to a guess array
