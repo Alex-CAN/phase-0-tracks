@@ -71,8 +71,13 @@ final = []
 while guesses != 0 
 	puts 'player 2'
 	guess_letter = gets.chomp
-	final << guess_letter
-	p new_game.decrypt(final)
+		if final.include? guess_letter
+			p new_game.decrypt(final)
+			guesses += 1
+		else
+			final << guess_letter
+			p new_game.decrypt(final)
+		end
 	guesses -= 1
 end
 
