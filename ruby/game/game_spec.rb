@@ -11,9 +11,9 @@ describe Game do
 		expect(new_game.decrypt(["r"])).to eq "--r-"
 	end
 
-	it "checks two strings to see if they're equal" do
-		expect(new_game.guess_check("word")).to eq "WINNER"
-		expect(new_game.guess_check("wind")).to eq "LOSER"
+	it "checks to see if password string includes all letters in player 2's final guess array" do
+		expect(new_game.guess_check(["w","r","d", "o"])).to eq "WINNER"
+		expect(new_game.guess_check(["w","i","n","d"])).to eq "LOSER"
 	end
 
 
