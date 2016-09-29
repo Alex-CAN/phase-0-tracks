@@ -3,6 +3,9 @@ class Game
 
 	def initialize(secret_word)
 		@secret_word = secret_word
+		@guess_count = secret_word.length
+		@guesser_word = Array.new(@guess_count, "-")
+		p "Lets play!"
 	end
 	def encrypt
 		word = secret_word.chars
@@ -12,22 +15,42 @@ class Game
 		end
 		return encrypted_word.join
 	end
-	def dash(let, guess_let)
-		if let != guess_let
-			"-"
-		else
-			return let
+	
+
+	def decrypt(final)
+		word = secret_word.chars
+			word.map.with_index do |letter, index|
+			if final.include? letter 
+				@guesser_word[index] = letter
+			else
+				@guesser_word[index] = "-"
+			end
 		end
+		return @guesser_word.join
+
 	end
 
-	def decrypt(guess_letter)
-		arr = []
-		word = secret_word.chars
-		word.each_index do |ind|
-			arr << dash(word[ind],guess_letter)
-		end
-		return arr.join
-	end
+
+
+
+
+
+	# def dash(let, guess_let)
+	# 	if let != guess_let
+	# 		"-"
+	# 	else
+	# 		return let
+	# 	end
+	# end
+
+	# def decrypt(guess_letter)
+	# 	arr = []
+	# 	word = secret_word.chars
+	# 	word.each_index do |ind|
+	# 		arr << dash(word[ind],guess_letter[ind])
+	# 	end
+	# 	return arr.join
+	# end
 
 	def guess_check(guess)
 		if guess == secret_word
@@ -61,6 +84,6 @@ while guesses != 0
 	puts 'player 2'
 	guess_letter = gets.chomp
 	final << guess_letter
-	p new_game.decrypt(guess_letter)
+	p new_game.decrypt(final)
 	guesses -= 1
 end

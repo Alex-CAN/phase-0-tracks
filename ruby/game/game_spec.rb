@@ -8,7 +8,7 @@ describe Game do
 	end
 
 	it "takes a guess letter and string of dashes. returns string with dashes replaced by letter respectively. " do
-		expect(new_game.decrypt("r")).to eq "--r-"
+		expect(new_game.decrypt(["r"])).to eq "--r-"
 	end
 
 	it "checks two strings to see if they're equal" do
