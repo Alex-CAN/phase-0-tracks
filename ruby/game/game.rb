@@ -3,11 +3,6 @@ class Game
 
 	def initialize(secret_word)
 		@secret_word = secret_word
-<<<<<<< HEAD
-	end
-	#PLAYER 1
-	def encrypt
-=======
 		@guess_count = (secret_word.length)
 		@guesser_word = Array.new(@guess_count, "-")
 		p "Lets play!"
@@ -25,7 +20,7 @@ class Game
 	
 
 	def decrypt(final)
->>>>>>> game_1
+
 		word = secret_word.chars
 			word.map.with_index do |letter, index|
 			if final.include? letter 
@@ -38,10 +33,6 @@ class Game
 
 	end
 
-
-<<<<<<< HEAD
-
-	#PLAYER 2
 	def dash(let, guess_let)
 		if let != guess_let
 			"-"
@@ -68,7 +59,6 @@ class Game
 
 	end
 
-=======
 	def guess_check(final)
 		check_array = []
 		final.each do |letter|
@@ -85,8 +75,6 @@ class Game
 			"WINNER"
 		end
 	end
-
->>>>>>> game_1
 end
 
 
@@ -95,62 +83,59 @@ end
 
 # # p new_game.decrypt("word", "r")
 # p new_game.decrypt("r")
-<<<<<<< HEAD
 
-puts 'player 1'
-word = gets.chomp
-new_game = Game.new(word)
+# puts 'player 1'
+# word = gets.chomp
+# new_game = Game.new(word)
 
-# word.length times get player 2's guess letter and puts decryption and psuh to a guess array
-# if guess array.include? gets guess give player another guess
-#join decrypted array and compare to word
-
-
-guesses = word.length
-final = []
-while guesses != 0 
-	puts 'player 2'
-	guess_letter = gets.chomp
-	final << guess_letter
-	new_game.decrypt(guess_letter)
-	guesses -= 1
-end
-=======
+# # word.length times get player 2's guess letter and puts decryption and psuh to a guess array
+# # if guess array.include? gets guess give player another guess
+# #join decrypted array and compare to word
 
 
-require 'io/console'
+# guesses = word.length
+# final = []
+# while guesses != 0 
+# 	puts 'player 2'
+# 	guess_letter = gets.chomp
+# 	final << guess_letter
+# 	new_game.decrypt(guess_letter)
+# 	guesses -= 1
+# end
 
-puts 'Welcome Player 1 please input a secret word to be guessed'
-word = STDIN.noecho(&:gets).chomp
-new_game = Game.new(word)
 
-# word.length times get player 2's guess letter and puts decryption and psuh to a guess array
-# if guess array.include? gets guess give player another guess
-#join decrypted array and compare to word
-puts 
-puts
-puts
-puts
-puts
-puts
-puts
-puts "GUESSING GAME"
-puts " Your Word: #{new_game.encrypt}"
-guesses = (word.length)
-final = []
-while guesses != 0 
-	puts 'Guess a letter player 2'
-	guess_letter = gets.chomp
-		if final.include? guess_letter
-			p new_game.decrypt(final)
-			guesses += 1
-		else
-			final << guess_letter
-			p new_game.decrypt(final)
-		end
-	guesses -= 1
-end
+# require 'io/console'
 
-puts word
-puts new_game.guess_check(final)
->>>>>>> game_1
+# puts 'Welcome Player 1 please input a secret word to be guessed'
+# word = STDIN.noecho(&:gets).chomp
+# new_game = Game.new(word)
+
+# # word.length times get player 2's guess letter and puts decryption and psuh to a guess array
+# # if guess array.include? gets guess give player another guess
+# #join decrypted array and compare to word
+# puts 
+# puts
+# puts
+# puts
+# puts
+# puts
+# puts
+# puts "GUESSING GAME"
+# puts " Your Word: #{new_game.encrypt}"
+# guesses = (word.length)
+# final = []
+# while guesses != 0 
+# 	puts 'Guess a letter player 2'
+# 	guess_letter = gets.chomp
+# 		if final.include? guess_letter
+# 			p new_game.decrypt(final)
+# 			guesses += 1
+# 		else
+# 			final << guess_letter
+# 			p new_game.decrypt(final)
+# 		end
+# 	guesses -= 1
+# end
+
+# puts word
+# puts new_game.guess_check(final)
