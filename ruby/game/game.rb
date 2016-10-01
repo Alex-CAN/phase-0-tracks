@@ -84,6 +84,7 @@ end
 # # p new_game.decrypt("word", "r")
 # p new_game.decrypt("r")
 
+<<<<<<< HEAD
 # puts 'player 1'
 # word = gets.chomp
 # new_game = Game.new(word)
@@ -103,6 +104,8 @@ end
 # 	guesses -= 1
 # end
 
+=======
+>>>>>>> game_1
 
 # require 'io/console'
 
@@ -138,4 +141,8 @@ end
 # end
 
 # puts word
+<<<<<<< HEAD
 # puts new_game.guess_check(final)
+=======
+# puts new_game.guess_check(final)
+>>>>>>> game_1
