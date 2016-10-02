@@ -7,13 +7,17 @@ describe Game do
 		expect(new_game.encrypt).to eq "----"
 	end
 
-	it "takes a guess letter and string of dashes. returns string with dashes replaced by letter respectively. " do
-		expect(new_game.decrypt(["r"])).to eq "--r-"
+	it "takes a guess letter and replaces dashes in compare hash to letters respectively." do
+		# new_game.compare_it = {"word"=>"----"}
+		expect(new_game.decrypt("r")).to eq "--r-"
+		# expect(new_game.compare_it).to eq {"word"=>"--r-"}
 	end
 
-	it "checks to see if password string includes all letters in player 2's final guess array" do
-		expect(new_game.guess_check(["w","r","d", "o"])).to eq "WINNER"
-		expect(new_game.guess_check(["w","i","n","d"])).to eq "LOSER"
+	it "takes the compare_it hash and sees if the key and value are equal" do
+		new_game.compare_it = {"word" => "word"}
+	 	expect(new_game.guess_check).to eq "WINNER"
+	 	new_game.compare_it = {"word" => "w--d"}
+	 	expect(new_game.guess_check).to eq "LOSER"
 	end
 
 
