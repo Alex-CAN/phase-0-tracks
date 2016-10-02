@@ -24,31 +24,15 @@ class Game
 	end
 
 	def guess_check
-		@compare_it.each {|word, guess|
+		@compare_it.each do |word, guess|
 			if word == guess
 				return "WINNER"
 			else
 				return "LOSER"
 			end
-			}
+			end
 	end
 
-	# def guess_check(final)
-	# 	check_array = []
-	# 	final.each do |letter|
-	# 		if secret_word.include? letter
-	# 			check_array << "o"
-	# 		else
-	# 			check_array << "x"
-	# 		end
-	# 	end
-
-	# 	if check_array.include? "x"
-	# 		"LOSER"
-	# 	else
-	# 		"WINNER"
-	# 	end
-	# end
 end
 
  # TEST DRIVER
@@ -81,27 +65,27 @@ puts " "*9999
 
 
 
-puts "WELCOME TO THE GUESSING GAME"
-puts " Your Word: #{new_game.encrypt}"
-guesses = (word.length)
-final = []
-	while guesses != 0 
- 	puts 'Guess a letter player 2'
- 	guess_letter = gets.chomp
- 		if final.include? guess_letter
- 			p new_game.decrypt(guess_letter)
-			guesses += 1
-		else
- 			final << guess_letter
- 			p new_game.decrypt(guess_letter)
- 		end
- 	guesses -= 1
- end
+# puts "WELCOME TO THE GUESSING GAME"
+# puts " Your Word: #{new_game.encrypt}"
+# guesses = (word.length)*2
+# final = []
+# 	while guesses != 0 
+#  	puts 'Guess a letter player 2'
+#  	guess_letter = gets.chomp
+#  		if final.include? guess_letter
+#  			p new_game.decrypt(guess_letter)
+# 			guesses += 1
+# 		else
+#  			final << guess_letter
+#  			p new_game.decrypt(guess_letter)
+#  		end
+#  	guesses -= 1
+#  end
 
-puts "The Word Was..."
-puts word
+# puts "The Word Was..."
+# puts word
 
-p new_game.guess_check
+# p new_game.guess_check
 
 
 

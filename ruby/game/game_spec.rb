@@ -8,13 +8,16 @@ describe Game do
 	end
 
 	it "takes a guess letter and replaces dashes in compare hash to letters respectively." do
+		# new_game.compare_it = {"word"=>"----"}
 		expect(new_game.decrypt("r")).to eq "--r-"
-		# expect(new_game.compare_it).to eq {"word" => "--r-"}
+		# expect(new_game.compare_it).to eq {"word"=>"--r-"}
 	end
 
 	it "takes the compare_it hash and sees if the key and value are equal" do
-		expect(new_game.guess_check({"word" => "word"})).to eq "WINNER"
-		expect(new_game.guess_check({"word" => "w--d"})).to eq "LOSER"
+		new_game.compare_it = {"word" => "word"}
+	 	expect(new_game.guess_check).to eq "WINNER"
+	 	new_game.compare_it = {"word" => "w--d"}
+	 	expect(new_game.guess_check).to eq "LOSER"
 	end
 
 
