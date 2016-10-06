@@ -9,14 +9,13 @@ function reverse(x) {for (var i = x.length; i > -1; i -= 1) {
 	console.log("lose");
 }
 else {
-	x[i] = x[i].length 
 	console.log(x[i]);
 }
 }
 }
 
  
-console.log(reverse(str));
+typeof(console.log(reverse(str)));
 
 
 

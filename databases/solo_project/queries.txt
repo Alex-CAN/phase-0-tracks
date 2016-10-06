@@ -38,4 +38,12 @@ sqlite>
 --------------------------------------------------------------------------------------------------------------------------
 
 
+<<<<<<< HEAD
 5. Delete an item that meets some condition (you can choose a condition that makes sense).
+=======
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM students WHERE graduate = 0;
+sqlite> SELECT * FROM students;
+2|Brittany Martinek|13|3|3|1
+3|John Paratore|13|1|1|1
+>>>>>>> 8.3
