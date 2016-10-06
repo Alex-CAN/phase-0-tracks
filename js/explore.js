@@ -15,7 +15,7 @@ else {
 }
 
  
-console.log(reverse(str));
+typeof(console.log(reverse(str)));
 
 
 
