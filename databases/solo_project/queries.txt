@@ -1,0 +1,45 @@
+1. Display the information in one table (either table is fine).
+-----------------------------------------------------------------------------------------------------------------------------
+sqlite> SELECT * FROM students;
+1|Breana MEager|13|2|4|0
+2|Brittany Martinek|13|3|3|1
+3|John Paratore|13|1|1|1
+4|Nick Louie|14|4|5|0
+sqlite>
+-------------------------------------------------------------------------------------------------------------------------------
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+--------------------------------------------------------------------------------------------------------------------------------
+sqlite> SELECT * FROM students;
+1|Breana MEager|13|2|4|0                       //Original table had typo "MEager"
+2|Brittany Martinek|13|3|3|1
+3|John Paratore|13|1|1|1
+4|Nick Louie|14|4|5|0
+sqlite> UPDATE students SET name="Breana Meager" WHERE name= "Breana MEager";
+sqlite> SELECT * FROM students;
+1|Breana Meager|13|2|4|0
+2|Brittany Martinek|13|3|3|1
+3|John Paratore|13|1|1|1
+4|Nick Louie|14|4|5|0
+sqlite>
+----------------------------------------------------------------------------------------------------------------------
+
+3. Display the information in both tables using one query.
+
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+------------------------------------------------------------------------------------------------------------------------
+sqlite> SELECT students.name, students.age, teachers.name, grades.grade, students.graduate FROM students JOIN teachers ON students.teacher_id = teachers.id,
+   ...> grades ON students.grade_id = grades.id;
+Breana Meager|13|Mr.Miller|D|0
+Brittany Martinek|13|Ms. Chen|C|1
+John Paratore|13|Ms.Shyne|A|1
+Nick Louie|14|Mr. Chen|F|0
+sqlite>
+--------------------------------------------------------------------------------------------------------------------------
+
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM students WHERE graduate = 0;
+sqlite> SELECT * FROM students;
+2|Brittany Martinek|13|3|3|1
+3|John Paratore|13|1|1|1
