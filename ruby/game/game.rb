@@ -36,12 +36,12 @@ class Game
 end
 
  # TEST DRIVER
-# new_game =  Game.new("word")
+new_game =  Game.new("word")
 # # p new_game.encrypt("word")
 
 # # p new_game.decrypt("word", "r")
 # p new_game.decrypt("r")
-# p new_game.compare_it
+p new_game.compare_it
 
 
 # # word.length times get player 2's guess letter and puts decryption and psuh to a guess array
@@ -50,18 +50,18 @@ end
 #require i/o method to use a noehco on console to hide player one's user input
 
 
-require 'io/console'
+# require 'io/console'
 
-puts 'Welcome Player 1 please input a secret word to be guessed'
-word = STDIN.noecho(&:gets).chomp
-new_game = Game.new(word)
+# puts 'Welcome Player 1 please input a secret word to be guessed'
+# word = STDIN.noecho(&:gets).chomp
+# new_game = Game.new(word)
 
 # # word.length times get player 2's guess letter and puts decryption and psuh to a guess array
 # # if guess array.include? gets guess give player another guess
 # #join decrypted array and compare to word
 
 
-puts " "*9999
+# puts " "*9999
 
 
 
