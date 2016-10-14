@@ -1,6 +1,7 @@
 # OPERATION KITTEN EXPLOSION!
 
 # talk about Object Relational Mapping (ORM)
+#taking relational data(columns,rows,data) being used in object orientated programs
 
 # require gems
 require 'sqlite3'
@@ -33,7 +34,7 @@ def create_kitten(db, name, age)
 end
 
 10000.times do
-  create_kitten(db, Faker::Name.name, 0)
+  create_kitten(db, Faker::Name.name, rand(0..4))
 end
 
 # explore ORM by retrieving data
