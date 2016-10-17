@@ -9,7 +9,9 @@ Bradford    The Beagle Nightclub          2           yuck!
 Holly       Amir's Towing                 3           none
 
 
-SELECT reviews.business_id = 1,
-JOIN users ON 
+SELECT users.first_name, businesses.name, reviews.stars, reviews.comments FROM reviews JOIN users ON 
 reviews.user_id = users.id, 
-businesses ON reviews.business_id = businesses.id;
+businesses ON reviews.business_id = businesses.id
+WHERE business_id = 1;
+
+
