@@ -19,24 +19,29 @@ SQL
 db.execute(create_table_cmd)
 
 #method makes a gamer tag
-def name_the_developer(favorite_pokemon, hipster_word, last_name)
-        favorite_pokemon = Faker::Pokemon.favorite_pokemon
-        hipster_word = Faker::Hipster.word.hipster_word
-        last_name = Faker::Name.last_name
-
-        tag = favorite_pokemon + hipster_word + favorite_color
+def gamer_namer(favorite_pokemon, hipster_word, last_name)
+        tag = favorite_pokemon + hipster_word + last_name
         tag.gsub!(/[e]/, '3')
         tag.gsub!(/[o]/, '0')
         tag.gsub!(/[a]/, '4')
 end
+
+test_scores = [Faker::Number.between(1, 101),Faker::Number.between(1, 101),Faker::Number.between(1, 101)]
+gameTag = gamer_namer(Faker::Pokemon.name, Faker::Hipster.word, Faker::Name.last_name)
+highScore = Babbage::Array.maximum(test_scores)
+lowScore = Babbage::Array.minimum(test_scores)
+# p gamer_namer(Faker::Pokemon.name, Faker::Hipster.word, Faker::Name.last_name )
+# p Babbage::Array.maximum(test_scores)
+# p Babbage::Array.minimum(test_scores)
+
 #method makes gamers
-def make_gamer(db,gameTag, highScore. lowScore)
+def make_gamer(db,gameTag, highScore, lowScore)
 	db.execute("INSERT INTO gamers (gameTag, highScore, lowScore) VALUES (?, ?, ?)", [gameTag, highScore, lowScore])
-end
+ end
 
-
-100.times do 
-	make_gamer(db, )
+ 100.times do 
+  	make_gamer(db, gameTag ,highScore , lowScore)
+ end
 
 
 
